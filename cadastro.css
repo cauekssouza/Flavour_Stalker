@@ -6,6 +6,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
+    align-items: center;
+    text-align: center;
 }
 
 /* Estilos do corpo da página */
@@ -13,7 +15,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 1000vh;
+    min-height: 100vh;
     background: black;
     text-align: center;
 }
@@ -51,7 +53,7 @@ body {
     }
     100% {
         --a: 360deg;
-     }
+    }
 }
 
 /* Estilos dos elementos pseudo-classes */
@@ -112,7 +114,6 @@ body {
     transform: translateY(100%);
     transition: 0.5s;
 }
-
 
 .loginCa h2 {
     text-transform: uppercase;
