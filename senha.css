@@ -1,0 +1,135 @@
+/* Estilizando o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+/* Estilizando a caixa de login */
+.Caixa {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    background: repeating-conic-gradient(from var(--a), #E8751A 0%, #E8751A 5%, transparent 5%, transparent 40%, #fd0505 50%);
+    filter: drop-shadow(0 15px 50px #A0153E);
+    border-radius: 20px;
+    animation: rotating 4s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Caixa:hover {
+    width: 400px;
+    height: 450px;
+}
+
+/* Animação de rotação */
+@keyframes rotating {
+    0% {
+       --a: 0deg;
+    }
+    100% {
+        --a: 360deg;
+     }
+}
+
+/* Estilos dos elementos pseudo-classes */
+.Caixa::before, .Caixa::after {
+    content: "";
+    position: absolute;
+    border-radius: 20px;
+}
+
+/* Elemento pseudo-classe antes do principal */
+.Caixa::before {
+    width: 100%;
+    height: 100%;
+    background-color: repeating-conic-gradient(from var(--a), rgb(113, 43, 211) 0%, rgb(113, 43, 211) 5%, transparent 5%, transparent 40%, rgb(113, 43, 211) 50%);
+    filter: drop-shadow(0 15px 50% rgba(7, 204, 198, 0.84));
+    animation: rotating 4s linear infinite;
+    animation-delay: -1s;
+}
+
+/* Elemento pseudo-classe após o principal */
+.Caixa::after {
+    inset: 4px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    background: #6a87d2;
+    border: 10px solid #FF407D;
+}
+
+/* Estilizando o formulário de login */
+.Login {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+/* Estilizando o cabeçalho do formulário */
+.Login h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Estilizando os ícones */
+.fa-solid {
+    margin-right: 5px;
+}
+
+/* Estilizando os campos de entrada */
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilizando os botões */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Estilizando os links */
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Estilizando o grupo de botões */
+.grupo {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilizando os botões no grupo */
+.grupo button {
+    width: 48%;
+}
+
+/* Estilizando o botão de entrada */
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilizando o botão de entrada ao passar o mouse */
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
