@@ -1,183 +1,159 @@
-/* Importação de fontes */
 @import url("https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400..700&family=Madimi+One&display=swap");
 
-/* Reset de estilos padrão */
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/* Estilos do corpo da página */
-body {
+.container{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 1000vh;
-    background: black;
+    height: 100vh;
+    background-color: #2b2d42;
 }
 
-/* Propriedade de ângulo personalizada */
-@property --a {
-    syntax: '<angle>';
-    inherits: false;
-    initial-value: 0deg;
-}
-
-/* Estilos do elemento principal do formulário de login */
-.Caixa {
+.content{
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 960px;
+    height: 65%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     position: relative;
-    width: 400px;
-    height: 400px;
-    background: repeating-conic-gradient(from var(--a), #E8751A 0%, #E8751A 5%, transparent 5%, transparent 40%, #fd0505 50%);
-    filter: drop-shadow(0 15px 50px #A0153E);
-    border-radius: 20px;
-    animation: rotating 6s linear infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.Caixa:hover {
-    width: 400px;
-    height: 450px;
-}
-
-/* Animação de rotação */
-@keyframes rotating {
-    0% {
-       --a: 0deg;
-    }
-    100% {
-        --a: 360deg;
-     }
-}
-
-/* Estilos dos elementos pseudo-classes */
-.Caixa::before, .Caixa::after {
+.content::before{
+    position: absolute;
     content: "";
-    position: absolute;
-    border-radius: 40px;
-}
-
-/* Elemento pseudo-classe antes do principal */
-.Caixa::before {
-    width: 100%;
+    background-color: #fee440;
+    width: 40%;
     height: 100%;
-    background-color: repeating-conic-gradient(from var(--a), rgb(113, 43, 211) 0%, rgb(113, 43, 211) 5%, transparent 5%, transparent 40%, rgb(113, 43, 211) 50%);
-    filter: drop-shadow(0 15px 50% rgba(7, 204, 198, 0.84));
-    animation: rotating 4s linear infinite;
-    animation-delay: -1s;
+    border-radius: 10px 0px 0px 10px;
+    color: #2b2d42;
+    animation: slidein 1s forwards;
 }
 
-/* Elemento pseudo-classe após o principal */
-.Caixa::after {
-    inset: 4px;
-    width: calc(100% - 8px);
-    height: calc(100% - 8px);
-    background: #6a87d2;
-    border: 10px solid #FF407D;
-}
-
-/* Estilos do formulário de login */
-.Login {
-    position: absolute;
-    inset: 100px;
+.first-content{
     display: flex;
-    justify-content: center;
+    z-index: 10;
+}
+
+
+.first-colunn{
+    text-align: center;
+    width: 40%;
+}
+
+.tittle{
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #2b2d42;
+}
+
+.icon-modify{
+    color: rgba(16, 199, 52, 0.6);
+    padding: 0 10px;
+}
+
+.form{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+
+.form input{
+    height: 35px;
+    border: none;
+    background-color: #edf2f4;
+}
+
+.label-input{
+    background-color: #E8751A;
+    display: flex;
     align-items: center;
-    flex-direction: column;
-    border-radius: 20px;
-    background: rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.5);
-    border-bottom:  2px solid rgba(255, 255, 255, 0.5);
-    transition: 0.5s;
-    color: #7F27FF;
+    margin-top: 15px;
 }
 
-.Caixa:hover .Login {
-    transform: translateY(0px);
-}
-
-.loginCa {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Adicionado para centralizar verticalmente */
-    flex-direction: column;
-    gap: 10px;
-    width: 70%;
-    transform: translateY(100%);
-    transition: 0.5s;
-}
-
-
-.loginCa h2 {
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 0.2em;
-}
-
-.loginCa input {
-    width: 100%;
-    padding: 10px 20px;
-    outline: none;
-    border: none;
-    font-size: 1em;
-    color: #F57D1F;
-    background: rgba(0, 0, 0, 0.1);
-    border: 2px solid #e3fe15;
-    border-radius: 30px;
-}
-
-.loginCa input::placeholder {
-    color: #6D2932;
-}
-
-/* Estilos do botão de envio do formulário de login */
-.loginCa input[type="submit"] {
-    background: #37B5B6;
-    border: none;
+.btn {
+    border-radius: 10px;
+    text-transform: capitalize;
+    background-color: #5356FF;
+    color: #4CCD99;
+    font-size: 12px;
     font-weight: 500;
-    color: #111;
-    cursor: pointer;
-    transition: 0.5s;
+    margin: 25px 10px 0; /* Adjust margin to create separation */
+    border: none;
+    display: inline-block;
 }
 
-.loginCa input[type="submit"]:hover {
-    box-shadow: 0 0 10px #0B60B0, 0 0 60px #392467;
+.btn:hover {
+    background-color: #124076;
+    color: #87A922;
 }
 
-/* Estilos do grupo de links */
-.grupo {
+.btn-primary {
+    background-color: #F5E8DD;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #9BCF53;
+    color:#15F5BA;  
+}
+
+.social-media {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.grupo a {
-    color: #A0153E;
-    text-decoration: none;
-}
-
-.grupo a:nth-child(2) {
-    color: #B80000;
-    font-weight: 800;
-}
-
- /* CSS Personalizado */
- .button {
-    border: #6a87d2;
+    margin: 0 10px; /* Add margin to create separation */
+    height: auto;
+    max-width: 10%;
     padding: 10px;
-    margin: 10px;
-    background: fixed;
-    -webkit-animation: alternate;
-    animation: infinite  1s linear;
+    box-sizing: border-box;
+    
 }
 
-.button:hover {
-    background-color: #e3fe15;
-    color: #B80000;
+/* Styles for the button container */
+.btn {
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Styles for the primary button */
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Change this to your desired color */
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove underline from the link */
+    border: none;
+    border-radius: 5px;
+}
+
+/* Hover effect for primary button */
+.btn-primary:hover {
+    background-color: #0056b3; /* Change this to a darker shade for hover effect */
+}
+
+
+
+@keyframes slidein{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes fadein{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
