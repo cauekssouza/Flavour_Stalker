@@ -8,20 +8,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
-    <div class="Caixa">
-        <div class="Login">
-            <div class="loginCa">            
-                <h2><i class="fa-solid fa-right-to-bracket"></i>Login</h2>
-                <i class="fa-solid fa-heart"></i>
-                <input type="text"  placeholder="Usuário">
-                <input type="password" id="senha" placeholder="Senha">
-                <input type="submit" value="Entrar">
-                <div class="grupo">
-                    <button><a href="senha.php">Esqueci Minha Senha</a></button>
-                    <button><a href="cadastrar.php">Cadastre-se</a></button>
+    <div class="container">
+        <div class="content">
+            <div class="first-content">
+                <div class="first-colunn">
+                    <h2 class="tittle"><i class="fas fa-right-to-bracket icon-modify"></i>Login</h2>
+                    <i class="fas fa-heart icon-modify"></i>
+                    <form class="form">
+                        <div class="label-input">
+                            <i class="fas fa-user icon-modify"></i>
+                            <input type="text" placeholder="Usuário">
+                        </div>
+                        <div class="label-input">
+                            <i class="fas fa-lock icon-modify"></i>
+                            <input type="password" id="senha" placeholder="Senha">
+                        </div>
+                        <input type="submit" value="Entrar" class="btn">
+                    </form>
+                    <div class="social-media">
+                    <div class="btn">
+    <a href="senha.php" class="btn-primary">Esqueci Minha Senha</a>
+</div>
+<div class="btn">
+    <a href="cadastrar.php" class="btn-primary">Cadastre-se</a>
+</div>
+        </div>
+            <div class="second-colunn">
+                    <p></p>
                 </div>
             </div>
         </div>
     </div>
 </body>
 </html>
+
