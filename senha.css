@@ -1,135 +1,69 @@
-/* Estilizando o corpo da página */
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f3f3f3;
+    box-sizing: border-box;
 }
 
-/* Estilizando a caixa de login */
-.Caixa {
-    position: relative;
-    width: 800px;
-    height: 400px;
-    background: repeating-conic-gradient(from var(--a), #E8751A 0%, #E8751A 5%, transparent 5%, transparent 40%, #fd0505 50%);
-    filter: drop-shadow(0 15px 50px #A0153E);
-    border-radius: 20px;
-    animation: rotating 4s linear infinite;
+@import url("https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400..700&family=Madimi+One&display=swap");
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.Caixa-Senha{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.Caixa:hover {
-    width: 400px;
-    height: 450px;
+    height: 100vh;
+    background-color: #2b2b2b;
 }
 
-/* Animação de rotação */
-@keyframes rotating {
-    0% {
-       --a: 0deg;
-    }
-    100% {
-        --a: 360deg;
-     }
-}
-
-/* Estilos dos elementos pseudo-classes */
-.Caixa::before, .Caixa::after {
-    content: "";
-    position: absolute;
-    border-radius: 20px;
-}
-
-/* Elemento pseudo-classe antes do principal */
-.Caixa::before {
-    width: 100%;
-    height: 100%;
-    background-color: repeating-conic-gradient(from var(--a), rgb(113, 43, 211) 0%, rgb(113, 43, 211) 5%, transparent 5%, transparent 40%, rgb(113, 43, 211) 50%);
-    filter: drop-shadow(0 15px 50% rgba(7, 204, 198, 0.84));
-    animation: rotating 4s linear infinite;
-    animation-delay: -1s;
-}
-
-/* Elemento pseudo-classe após o principal */
-.Caixa::after {
-    inset: 4px;
-    width: calc(100% - 8px);
-    height: calc(100% - 8px);
-    background: #6a87d2;
-    border: 10px solid #FF407D;
-}
-
-/* Estilizando o formulário de login */
-.Login {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
-}
-
-/* Estilizando o cabeçalho do formulário */
-.Login h2 {
-    margin-bottom: 15px;
-    font-size: 24px;
-    color: #333;
-}
-
-/* Estilizando os ícones */
-.fa-solid {
-    margin-right: 5px;
-}
-
-/* Estilizando os campos de entrada */
-input[type="text"],
-input[type="password"],
-input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Estilizando os botões */
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-}
-
-/* Estilizando os links */
-a {
-    text-decoration: none;
-    color: #007bff;
-}
-
-/* Estilizando o grupo de botões */
-.grupo {
-    margin-top: 10px;
+.Senha{
+    background-color: #ff0707;
+    border-radius: 10px;
+    width: 500px;
+    height: 60%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px;
 }
 
-/* Estilizando os botões no grupo */
-.grupo button {
-    width: 48%;
+h2{
+    font-size: 25px;
+    font-weight: 600;
+    color: #2b2d;
+    margin-bottom: 20px;
 }
 
-/* Estilizando o botão de entrada */
-input[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
+i.fa-heart {
+    color: #e63946;
+    margin-bottom: 20px;
+}
+
+input[type="password"]{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
     border: none;
+    background-color: #edf2f4;
+    border-radius: 6px;
+}
+
+
+button{
+    width: 100%;
+    height: 40px;
+    background-color: #0f13ee;
+    color: #87A922;
+    border: none;
+    border-radius: 6px;
     cursor: pointer;
 }
 
-/* Estilizando o botão de entrada ao passar o mouse */
-input[type="submit"]:hover {
-    background-color: #0056b3;
+button:hover{
+    background-color: #0220ff;
 }
