@@ -19,7 +19,7 @@
     background-color: #ffffff;
     border-radius: 10px;
     width: 960px;
-    height: 65%;
+    height: 75%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -87,10 +87,12 @@
     color: #4CCD99;
     font-size: 12px;
     font-weight: 500;
-    margin: 25px 10px 0; /* Adjust margin to create separation */
+    margin: 35px 10px 0; /* Adjust margin to create separation */
     border: none;
     display: inline-block;
 }
+
+
 
 .btn:hover {
     background-color: #124076;
@@ -106,6 +108,22 @@
     background-color: #9BCF53;
     color:#15F5BA;  
 }
+
+
+input[type="text"] {
+    /* Your styles here */
+    width: 200px; 
+    height: 40px; 
+    padding: 30px; 
+}
+
+input[type="password"]#senha {
+    /* Your styles here */
+    width: 200px; /* Example width */
+    height: 40px; /* Example height */
+    padding: 30px; /* Example padding */
+}
+
 
 .social-media {
     width: 100%;
